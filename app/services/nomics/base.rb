@@ -29,7 +29,7 @@ class Nomics::Base < ApplicationService
     ExceptionNotifier.notify_exception(e)
   end
 
-  def api_respoonse(response)
+  def api_response(response)
     case response
     when Net::HTTPSuccess
       Rails.logger.info "Nomics::List::Response: #{JSON.parse(response.read_body).as_json}"

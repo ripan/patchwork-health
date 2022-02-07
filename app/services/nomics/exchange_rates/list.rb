@@ -1,7 +1,7 @@
 class Nomics::ExchangeRates::List < Nomics::Base
   def call
     response = api_request("#{API_URL}/exchange-rates", options)
-    api_respoonse(response)
+    api_response(response)
   end
 end
 

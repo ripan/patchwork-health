@@ -5,4 +5,4 @@ class Nomics::ExchangeRates::List < Nomics::Base
   end
 end
 
-# Nomics::ExchangeRates::List.call(ids:"BTC")
+# Nomics::ExchangeRates::List.call

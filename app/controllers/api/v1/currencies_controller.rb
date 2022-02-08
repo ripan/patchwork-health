@@ -1,17 +1,14 @@
 class Api::V1::CurrenciesController < ApplicationController
   def index
-    currencies = Nomics::Currencies::List.call(ids:"BTC,ETH,XRP")
-    render json: currencies
+    render json: Nomics::Currencies::List.call(ids:params[:ids], page: page, per_page: per_page)
   end
 
   def ticker
-    ticker = Nomics::Currencies::Ticker.call(ids:"BTC,ETH")
-    render json: ticker
+    render json: Nomics::Currencies::Ticker.call(ids:params[:ids])
 
   end
 
   def highlights
-    highlights = Nomics::Currencies::Highlights.call(currency: 'BTC', convert: 'ZAR', interval: '1h')
-    render json: highlights
+    render json: Nomics::Currencies::Highlights.call(currency: params[:currency], convert: params[:convert], interval: params[:interval])
   end
 end

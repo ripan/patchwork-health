@@ -32,7 +32,7 @@ class Nomics::Base < ApplicationService
   def api_response(response)
     case response
     when Net::HTTPSuccess
-      Rails.logger.info "Nomics::List::Response: #{JSON.parse(response.read_body).as_json}"
+      response.read_body
     else
       raise response.value
     end

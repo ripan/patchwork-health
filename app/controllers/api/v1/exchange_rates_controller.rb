@@ -1,6 +1,5 @@
 class Api::V1::ExchangeRatesController < ApplicationController
   def index
-    exchange_rates = Nomics::ExchangeRates::List.call(ids:"BTC")
-    render json: exchange_rates
+    render json: Nomics::ExchangeRates::List.call
   end
 end

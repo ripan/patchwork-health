@@ -9,6 +9,9 @@
   > Rails 7.0.1 
 
 ## HowTos
+* How to run the application
+  > rails s
+
 * How to run the test suite
   > bundle exec rspec
 
@@ -25,3 +28,12 @@
   - Nomics::Currencies::Ticker.call(ids:"BTC,ETH")
   - Nomics::ExchangeRates::List.call
 - Currently API documentation can be seen only by opening the html file. We can use 'apitome' gem to mount it to "/api/docs" so that it can be accessed by http://localhost:3000/api/docs
+
+## Published APIs
+- GET /api/v1/currencies/highlights
+- GET /api/v1/currencies/ticker
+- GET /api/v1/currencies
+- GET /api/v1/exchange_rates
+
+## ENV variables
+- API_KEY

@@ -24,7 +24,7 @@ resource "Currencies" do
     let(:per_page) { 3 }
     let(:ids) { 'BTC,ETH,XRP' }
 
-    example "Listing currencies" do
+    example "Listing Currencies Ticker" do
       do_request
 
       expect(status).to eq 200
@@ -41,7 +41,7 @@ resource "Currencies" do
     let(:convert) { 'ZAR' }
     let(:interval) { '1h' }
 
-    example "Listing currencies" do
+    example "Currency Highlights" do
       do_request
 
       expect(status).to eq 200

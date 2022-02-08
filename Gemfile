@@ -45,6 +45,7 @@ gem 'dotenv-rails'
 
 group :test do
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'webmock', '>= 3.5.1'
 end
 
 # API Documentation

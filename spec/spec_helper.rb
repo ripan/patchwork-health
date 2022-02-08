@@ -91,4 +91,9 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  config.before(:each) do
+    stub_request(:any, /api.nomics.com/).to_return(status: 200, body: "{}", headers: {})
+  end
+
 end

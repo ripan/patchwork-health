@@ -1,6 +1,10 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
+before(:each) do
+  stub_request(:any, /api.nomics.com/).to_return(status: 200, body: "{}", headers: {})
+end
+
 resource "Currencies" do
   get "/api/v1/currencies" do
 

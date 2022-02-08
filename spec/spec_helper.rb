@@ -92,8 +92,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  config.before(:each) do
-    stub_request(:any, /api.nomics.com/).to_return(status: 200, body: "{}", headers: {})
-  end
-
 end
